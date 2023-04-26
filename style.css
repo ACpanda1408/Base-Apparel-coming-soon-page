@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+html,
+body {
+  margin: 0px;
+  height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.container{
+  height: 100%;
+  background: linear-gradient(#fffeff, #fff3f3);
+}
+h1{
+  font-size: 3.9em;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: .15em;
+}
+span{
+  color: hsl(0, 36%, 70%);
+  font-weight: 200;
+}
+header{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.logo{
+  margin-left: 30px;
+  width: 35%;
+}
+.hero{
+  width: 100%;
+}
+p{
+  color: #d5b5b6;
+  text-align: center;
+  padding: 0 30px;
+  font-weight: 800;
+  line-height: 1.2em;
+}
+form{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+input{
+  height: 45px;
+  width: 250px;
+  background-color: #fff5f4;
+  border: hsl(0, 36%, 70%) solid .5px;
+  padding-left: 20px;
+  border-radius: 25px;
+}
+::placeholder{
+  color: hsl(0, 36%, 70%);
+}
+button{
+  border-radius: 25px;
+  background: linear-gradient(to right, #f5b4b4, #ef9593);
+  border: none;
+  width: 80px;
+  height: 50px;
+}
+.desktop{
+  display: none;
+}
+button:hover{
+  box-shadow: 0 0 15px #f5afad;
+}
+#message{
+  margin-top: 20px;
+}
+@media only screen and (min-width: 700px){
+  .desktop{
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }  
+  .mobile{
+    display: none;
+  }
+  header{
+    width: 35%;
+  }
+  h1{
+    text-align: left;
+  }
+  .logo{
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  p{
+    text-align: left;
+    width: 400px;
+    padding: 0 0;
+  }
+  form{
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  .container > *{
+    margin-left: 15%;
+  }
+  .container{
+    display: grid;
+    grid-template-rows: .4fr .5fr .5fr;
+  }
+}
